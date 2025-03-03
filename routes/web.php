@@ -16,6 +16,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::get('/profile/{user}', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/profile/{user}/photos', [ProfileController::class, 'showPhotos'])->name('profile.showPhotos');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
