@@ -34,12 +34,12 @@
         <div class="py-4">
             <ul class="flex justify-center gap-10 text-gray-500">
                 <li class="">
-                    <x-nav-link>
+                    <x-nav-link :href="route('profile.index', $user->id)" :active="request()->is('profile/' . $user->id)">
                         POSTS
                     </x-nav-link>
                 </li>
                 <li>
-                    <x-nav-link>
+                    <x-nav-link :href="route('profile.showPhotos', $user->id)" :active="request()->is('profile/' . $user->id . '/photos')">
                         PHOTOS
                     </x-nav-link>
                 </li>
