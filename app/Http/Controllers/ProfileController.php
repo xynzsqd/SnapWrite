@@ -21,7 +21,7 @@ class ProfileController extends Controller
 
     public function index(User $user)
     {
-        return $user->name;
+        return view('profile.index', compact('user'));
     }
     /**
      * Display the user's profile form.
