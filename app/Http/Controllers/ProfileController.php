@@ -23,6 +23,11 @@ class ProfileController extends Controller
     {
         return view('profile.index', compact('user'));
     }
+
+    public function showPhotos(User $user)
+    {
+        return view('profile.index', compact('user'));
+    }
     /**
      * Display the user's profile form.
      */
