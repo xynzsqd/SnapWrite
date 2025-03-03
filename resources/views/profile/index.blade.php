@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="max-w-6xl px-4 mx-auto ">
+    <div class="max-w-6xl px-4 mx-auto">
 
         <!--Profile header-->
         <div class="py-10 flex items-center border-b-2 border-slate-200">
