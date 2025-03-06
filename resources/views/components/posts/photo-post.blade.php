@@ -1,14 +1,14 @@
-@props(['isInFeed' => false])
+@props(['post'])
 
 @php
-    $classes = $isInFeed
-            ? 'border-2 p-8 pb-4'
-            : 'border-2 pb-4 rounded-2xl';
+    $isFeedRoute = request()->routeIs('feed');
+
+    $classes = $isFeedRoute ? 'border-2 p-8 pb-4' : 'border-2 pb-4 rounded-2xl';
 @endphp
 
 <div {{$attributes->merge(['class' => $classes])}}>
-        @if ($isInFeed)
-            <x-posts.post-header class="mb-2" />
+        @if ($isFeedRoute)
+            <x-posts.post-header class="mb-2" :post="$post" />
         @endif
     <div>
         <a href="#">

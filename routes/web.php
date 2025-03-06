@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,9 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/feed', function () {
-    return view('feed');
-})->middleware(['auth', 'verified'])->name('feed');
+Route::get('/feed', [FeedController::class, 'index'])->middleware(['auth', 'verified'])->name('feed');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'redirectToUserProfile']);
