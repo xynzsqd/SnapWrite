@@ -1,6 +1,6 @@
-<div class="border p-8">
+<div class="border p-8 pb-4">
     <x-posts.post-header />
-    <div>
+    <div class="mb-2">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi cumque
             temporibus
             architecto necessitatibus ducimus totam ipsa quasi deleniti iure provident
@@ -10,4 +10,5 @@
             est ullam. Quidem maxime at, optio sed, temporibus nobis amet fuga aliquid eius,
             corporis aut!</p>
     </div>
+    <x-posts.post-footer></x-posts.post-footer>
 </div>
