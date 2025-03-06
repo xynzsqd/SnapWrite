@@ -21,6 +21,10 @@ class ProfileController extends Controller
 
     public function index(User $user)
     {
+        $user->load(['posts' => function ($query) {
+            $query->orderBy('created_at', 'desc');
+        }]);
+
         return view('profile.index', compact('user'));
     }
 

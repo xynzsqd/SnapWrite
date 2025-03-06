@@ -3,9 +3,9 @@
 <div class="py-8">
     @if (request()->routeIs('profile.index'))
         <ul class="flex flex-col justify-center items-center gap-8">
-            @foreach (range(0, 4) as $post)
+            @foreach ($user->posts as $post)
                 <li class="w-2/3">
-                    <x-posts.text-post />
+                    <x-posts.text-post :post="$post" />
                 </li>
             @endforeach
 
