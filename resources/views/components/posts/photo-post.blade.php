@@ -10,7 +10,7 @@
         @if ($isInFeed)
             <x-posts.post-header class="mb-2" />
         @endif
-    <div class="">
+    <div>
         <a href="#">
             <div class="h-96 overflow-hidden relative mb-3 rounded-2xl">
                 <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -18,6 +18,6 @@
                     alt="user's photo">
             </div>
         </a>
-        <x-posts.post-footer></x-posts.post-footer>
     </div>
+        <x-posts.post-footer></x-posts.post-footer>
 </div>
